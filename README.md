@@ -89,7 +89,7 @@ curl -X POST http://localhost:3000/reservations \
 
 <!-- Ajoutez vos captures d'écran ici, par exemple des requêtes Postman -->
 <p align="center">
-  <img src="images/api_image_01" alt="Aperçu de l'API" width="800">
+  <img src="images/api_image_01.png" alt="Aperçu de l'API" width="800">
 </p>
 
 ---
