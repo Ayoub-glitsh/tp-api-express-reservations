@@ -23,6 +23,10 @@ Ce projet est une API back-end simple pour la gestion des réservations, dévelo
   <a href="https://www.postman.com/" target="_blank" rel="noreferrer">
     <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" width="70" height="70"/>
   </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.thunderclient.com/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/rangav/thunder-client-support/master/images/logo.png" alt="Thunder Client" width="60" height="60" style="border-radius: 12px;"/>
+  </a>
 </p>
 
 ## ⚙️ Installation & Démarrage

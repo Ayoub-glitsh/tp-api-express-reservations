@@ -12,7 +12,7 @@ const PORT = 3000;
 
 // Route principale
 app.get("/", (req, res) => {
-  res.send("API de gestion des réservations MVC 🚀");
+  res.send("API de gestion des réservations MVC ");
 });
 
 // Montage du routeur principal des réservations
