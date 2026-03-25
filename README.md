@@ -44,18 +44,48 @@ Ce projet est une API back-end simple pour la gestion des réservations, dévelo
    ```
    Le serveur sera lancé sur `http://localhost:3000`.
 
+## 🏗️ Architecture du Projet (MVC)
+
+Ce projet respecte désormais l'architecture **Modèle-Vue-Contrôleur (MVC)** pour une meilleure séparation des responsabilités et une maintenance simplifiée :
+- 📁 **`models/`** : Gère l'accès aux données (simulées actuellement via un tableau en mémoire).
+- 📁 **`controllers/`** : Traite la logique métier, manipule les modèles et renvoie les réponses HTTP adaptées.
+- 📁 **`routes/`** : Définit l'ensemble des points d'entrée de l'API (endpoints) et les achemine vers les bons contrôleurs.
+- 📁 **`middlewares/`** : Intercepte les requêtes entrantes (ex: `logger.middleware.js` pour journaliser toutes les requêtes dans la console).
+
 ## 📌 Points d'accès de l'API (Endpoints)
 
-L'API fonctionne avec les endpoints suivants :
+L'API expose le groupe principal `/reservations` :
 
 | Méthode | Route | Description |
 | :--- | :--- | :--- |
-| `GET` | `/` | Message d'accueil / Point d'entrée |
-| `GET` | `/search?client=nom` | Rechercher les réservations par nom de client |
-| `GET` | `/reservations/:id` | Récupérer les détails d'une réservation spécifique |
-| `POST` | `/reservations` | Créer une nouvelle réservation (Body JSON: `{ "client": "...", "chambre": "..." }`) |
-| `PUT` | `/reservations/:id` | Modifier une réservation existante |
-| `DELETE` | `/reservations/:id` | Procéder à la suppression d'une réservation |
-| `GET` | `/info` | Lire les informations (ex: User-Agent) depuis les Headers |
+| `GET` | `/` | Point d'entrée de l'API (Message d'accueil express) |
+| `GET` | `/reservations` | Récupère la liste de toutes les réservations |
+| `GET` | `/reservations?client=Nom` | Recherche des réservations filtrées par le nom du client |
+| `GET` | `/reservations/:id` | Récupère les détails complets d'une réservation selon son identifiant unique |
+| `POST` | `/reservations` | Crée une réservation (Format attendu en Body JSON: `{ "client": "...", "chambre": "..." }`) |
+| `PUT` | `/reservations/:id` | Mets à jour les informations d'une réservation existante |
+| `DELETE` | `/reservations/:id` | Supprime définitivement une réservation par son identifiant |
+| `GET` | `/info` | Affiche vos informations client comme le `User-Agent` récupéré depuis les Headers HTTP |
+
+### 💡 Exemples d'utilisation (CLI)
+
+**1. Récupérer l'ensemble des données**
+```bash
+curl -X GET http://localhost:3000/reservations
+```
+
+**2. Ajouter une nouvelle réservation test**
+```bash
+curl -X POST http://localhost:3000/reservations \
+  -H "Content-Type: application/json" \
+  -d '{"client": "Jean Dupont", "chambre": "305"}'
+```
+
+## 📸 Galerie
+
+<!-- Ajoutez vos captures d'écran ici, par exemple des requêtes Postman -->
+<p align="center">
+  <img src="https://via.placeholder.com/800x400.png?text=Aper%C3%A7u+des+requ%C3%AAtes+API" alt="Aperçu de l'API" width="800">
+</p>
 
 ---
