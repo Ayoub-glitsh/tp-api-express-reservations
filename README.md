@@ -59,4 +59,3 @@ L'API fonctionne avec les endpoints suivants :
 | `GET` | `/info` | Lire les informations (ex: User-Agent) depuis les Headers |
 
 ---
-**Développé avec ❤️**
