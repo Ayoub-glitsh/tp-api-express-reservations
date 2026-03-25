@@ -25,7 +25,8 @@ Ce projet est une API back-end simple pour la gestion des réservations, dévelo
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://www.thunderclient.com/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/rangav/thunder-client-support/master/images/logo.png" alt="Thunder Client" width="60" height="60" style="border-radius: 12px;"/>
+    <img  alt="Thunder Client" width="60" height="60" style="border-radius: 12px;" src="https://github.com/user-attachments/assets/024f37e0-1bc2-4a57-956e-1931a8bf3f7c" />
+
   </a>
 </p>
 
